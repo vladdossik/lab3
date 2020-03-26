@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_marginTop="30dp"
+       android:paddingTop="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_marginLeft="2.5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnadd"
+            android:text="Add 1"/>
+        <Button
+            android:layout_marginTop="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnView"
+            android:text="View"
+            android:layout_toRightOf="@+id/btnadd"/>
+
+        <Button
+            android:layout_marginLeft="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnDel"
+            android:text="Change"
+            android:layout_toRightOf="@+id/btnView"/>
+        <Button
+        android:layout_marginLeft="1dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btreplace"
+        android:text="Replace"
+        android:layout_toRightOf="@+id/btnDel"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="280dp"
+        android:padding="10dp">
+        <EditText
+
+            android:id="@+id/addname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="add name"
+            android:visibility="gone">
+            </EditText>
+
+        <EditText
+            android:id="@+id/addtime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:hint="add time"
+            android:visibility="gone">
+        </EditText>
+        <Button
+            android:id="@+id/btnsave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:text="Save"
+            android:layout_marginLeft="120dp"
+            android:visibility="gone">
+
+        </Button>
+    </RelativeLayout>
+
+</RelativeLayout>
