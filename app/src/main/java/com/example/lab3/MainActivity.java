@@ -26,9 +26,6 @@ private Button change;
 private Button save;
 private EditText ediname;
 private EditText edittime;
-     //todo finviewbyid кнопку и edittextы
-     //todo настроить видимость и подключение
-     //todo исправить add
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,13 +41,9 @@ private EditText edittime;
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                //String newEntry = "Артем Артемович Артемов";
-                 //   AddData(newEntry,"14:20");
                 ediname.setVisibility(View.VISIBLE);
                 edittime.setVisibility(View.VISIBLE);
                 save.setVisibility(View.VISIBLE);
-
             }
         });
         save.setOnClickListener(new View.OnClickListener()
@@ -110,8 +103,7 @@ private EditText edittime;
     }
 public void DeleteData()
 {
-
-Random random=new Random();
+      Random random=new Random();
      String[] Names={"Семен Семенович Семенов","Илья Ильич Ильичов","Андрей Андреев Андреевич","Федор Федоров Федорович","Максим Максимович Максимов","Матвей Матвеевич Матвеев","Данила Данилович Данилов","Григорий Григорьев Григорьевич","Давид Давидович Давидов"};
     String[]time={"12:14","13:21","10:10","15:15","23:56","14:32","12:23","14:21"};
      int i=random.nextInt(8);
@@ -125,10 +117,6 @@ Random random=new Random();
     i=random.nextInt(8);
     mDatabaseHelper.DeleteandAdd(1,Names[i],time[i]);
 }
- /**
-     * customizable toast
-     * @param message
-     */
     private void toastMessage(String message){
         Toast.makeText(this,message, Toast.LENGTH_SHORT).show();
     }

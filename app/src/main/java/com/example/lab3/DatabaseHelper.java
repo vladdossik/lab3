@@ -1,23 +1,12 @@
 package com.example.lab3;
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
-import android.widget.Toast;
-
-import static android.os.Build.ID;
-
-/**
- * Created by User on 2/28/2017.
- */
-
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    private static final String TAG = "DatabaseHelper";
+  //      private static final String TAG = "DatabaseHelper";
     private static final String TABLE_NAME = "people_table";
     private static final String COL1 = "ID";
     private static final String COL2 = "name";

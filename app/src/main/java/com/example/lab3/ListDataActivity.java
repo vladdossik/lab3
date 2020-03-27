@@ -22,13 +22,8 @@ import java.util.ArrayList;
  */
 
 public class ListDataActivity extends AppCompatActivity {
-
-    private static final String TAG = "ListDataActivity";
-
     DatabaseHelper mDatabaseHelper;
-
     private ListView mListView;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +32,6 @@ public class ListDataActivity extends AppCompatActivity {
         mDatabaseHelper = new DatabaseHelper(this);
         populateListView();
     }
-
     public void populateListView() {
         //get the data and append to a list
         Cursor data = mDatabaseHelper.getData();
@@ -46,25 +40,13 @@ public class ListDataActivity extends AppCompatActivity {
             //get the value from the database in column 1
             //then add it to the ArrayList
             listData.add(data.getPosition() + 1 + " | " + data.getString(1) + " | " + data.getString(2));
-
         }
 
-
-        //create the list adapter and set the adapter
         ListAdapter adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listData);
         mListView.setAdapter(adapter);
     }
-    /**
-     * customizable toast
-     * @param message
-     */
     private void toastMessage(String message){
         Toast.makeText(this,message, Toast.LENGTH_SHORT).show();
     }
-    public void Thelast()
-    {
-        //int i=data.getColumnCount()+1;
-         // listData.remove(i);
-         // listData.add(i+1+" | "+" Fjekrltjerlw tert"+" | "+"12:12 ");
-    }
+
 }
