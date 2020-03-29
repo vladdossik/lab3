@@ -14,13 +14,7 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
 import java.util.ArrayList;
-
-/**
- * Created by User on 2/28/2017.
- */
-
 public class ListDataActivity extends AppCompatActivity {
     DatabaseHelper mDatabaseHelper;
     private ListView mListView;
@@ -45,8 +39,6 @@ public class ListDataActivity extends AppCompatActivity {
         ListAdapter adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listData);
         mListView.setAdapter(adapter);
     }
-    private void toastMessage(String message){
-        Toast.makeText(this,message, Toast.LENGTH_SHORT).show();
-    }
+
 
 }

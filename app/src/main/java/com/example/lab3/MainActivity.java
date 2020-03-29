@@ -57,7 +57,7 @@ private EditText edittime;
                 {
                     String name=ediname.getText().toString();
                     String time=edittime.getText().toString();
-                    ediname.setText(" ");
+                    ediname.setText("");
                     edittime.setText(" ");
                     AddData(name,time);
                     ediname.setVisibility(View.GONE);
