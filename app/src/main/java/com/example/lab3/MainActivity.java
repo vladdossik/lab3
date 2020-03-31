@@ -87,7 +87,7 @@ private EditText edittime;
             @Override
             public void onClick(View v) {
 
-    mDatabaseHelper.replace("Иван Иванович Иванов");
+    mDatabaseHelper.replace("Иванов", "Иван",  "Иванович");
 
             }
         });
@@ -104,18 +104,20 @@ private EditText edittime;
 public void DeleteData()
 {
       Random random=new Random();
-     String[] Names={"Семен Семенович Семенов","Илья Ильич Ильичов","Андрей Андреев Андреевич","Федор Федоров Федорович","Максим Максимович Максимов","Матвей Матвеевич Матвеев","Данила Данилович Данилов","Григорий Григорьев Григорьевич","Давид Давидович Давидов"};
+     String[] Names={"Семен","Илья","Андрей","Федор","Максим","Матвей","Данила","Григорий","Давид"};
+     String[] Surnames={"Семенов","Ильичов","Андреев","Федоров","Максимов","Матвеев","Данилов","Григорьев","Давидов"};
+     String[]Patronymics={"Семенович","Ильич","Андреевич","Федорович","Максимович","Матвеевич","Данилович","Григорьевич","Давидович"};
     String[]time={"12:14","13:21","10:10","15:15","23:56","14:32","12:23","14:21"};
      int i=random.nextInt(8);
-   mDatabaseHelper.DeleteandAdd(0,Names[i],time[i]);
+   mDatabaseHelper.DeleteandAdd(0,Surnames[i],Patronymics[i],Names[i],time[i]);
     i=random.nextInt(8);
-    mDatabaseHelper.DeleteandAdd(1,Names[i],time[i]);
+    mDatabaseHelper.DeleteandAdd(1,Surnames[i],Patronymics[i],Names[i],time[i]);
     i=random.nextInt(8);
-    mDatabaseHelper.DeleteandAdd(1,Names[i],time[i]);
+    mDatabaseHelper.DeleteandAdd(1,Surnames[i],Patronymics[i],Names[i],time[i]);
     i=random.nextInt(8);
-    mDatabaseHelper.DeleteandAdd(1,Names[i],time[i]);
+    mDatabaseHelper.DeleteandAdd(1,Surnames[i],Patronymics[i],Names[i],time[i]);
     i=random.nextInt(8);
-    mDatabaseHelper.DeleteandAdd(1,Names[i],time[i]);
+    mDatabaseHelper.DeleteandAdd(1,Surnames[i],Patronymics[i],Names[i],time[i]);
 }
     private void toastMessage(String message){
         Toast.makeText(this,message, Toast.LENGTH_SHORT).show();
